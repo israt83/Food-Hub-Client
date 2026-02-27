@@ -50,7 +50,7 @@ export default async function LoginPage() {
 				{/* RIGHT SIDE: THE VISUAL */}
 				<div className='relative hidden lg:block overflow-hidden'>
 					<img
-						src=''
+						src='https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?q=80&w=781&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'
 						alt='Delicious Food Background'
 						className='absolute inset-0 h-full w-full object-cover'
 					/>
@@ -63,7 +63,7 @@ export default async function LoginPage() {
 							</div>
 							<h2 className='text-4xl font-black leading-tight italic uppercase'>
 								Best Flavors <br />
-								<span className='text-green-500'>For You.</span>
+								<span className='text-amber-500'>For You.</span>
 							</h2>
 						</div>
 					</div>

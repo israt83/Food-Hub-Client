@@ -70,7 +70,7 @@ export function Navbar({ user: initialUser }: NavbarProps) {
     <header className="sticky top-0 z-50 w-full  bg-background/60 backdrop-blur-xl supports-[backdrop-filter]:bg-background/40">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         {/* LEFT: LOGO */}
-        <div className="flex items-center gap-8">
+        <div>
           <Link
             href="/"
             className="flex items-center gap-2 transition-transform hover:scale-105"
@@ -95,26 +95,28 @@ export function Navbar({ user: initialUser }: NavbarProps) {
               ></div>
             </div>
           </Link>
-
+        </div>
+        <div className="flex items-center gap-8">
           {/* DESKTOP MENU */}
-          <nav className="hidden lg:flex items-center gap-1">
-            {menu.map((item) => (
-              <Link
-                key={item.title}
-                href={item.url}
-                className={cn(
-                  "relative px-4 py-2 text-sm font-medium transition-all duration-200 rounded-full",
-                  pathname === item.url
-                    ? "bg-primary/10 text-primary"
-                    : "text-muted-foreground hover:text-foreground hover:bg-muted/50",
-                )}
-              >
-                {item.title}
-                {pathname === item.url && (
-                  <span className="absolute inset-x-4 -bottom-[18px] h-0.5 bg-primary rounded-full" />
-                )}
-              </Link>
-            ))}
+          <nav className="hidden lg:flex items-center gap-6">
+            {menu.map((item) => {
+              const isActive = pathname === item.url;
+
+              return (
+                <Link
+                  key={item.title}
+                  href={item.url}
+                  className={cn(
+                    "relative px-2 py-1 text-lg font-normal transition-all duration-300",
+                    "text-amber-600 hover:text-amber-700",
+                    isActive &&
+                      "after:absolute after:-bottom-1 after:left-0 after:w-full after:h-[2px] after:bg-amber-500",
+                  )}
+                >
+                  {item.title}
+                </Link>
+              );
+            })}
           </nav>
         </div>
 
@@ -123,14 +125,20 @@ export function Navbar({ user: initialUser }: NavbarProps) {
           <div className="hidden sm:flex items-center gap-2 mr-2 border-r pr-4 border-muted">
             {/* THEME */}
             <Button
-              variant="ghost"
-              size="icon"
-              className="rounded-full hover:bg-primary/10 hover:text-primary transition-colors"
-              onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-            >
-              <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
-              <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
-            </Button>
+  variant="ghost"
+  size="icon-lg"
+  className="relative transition-colors"
+  onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+>
+  <Sun
+    size={40}
+    className="rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 text-amber-600"
+  />
+  <Moon
+    size={40}
+    className="absolute rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100 text-amber-600"
+  />
+</Button>
 
             {/* CART */}
             <Link href="/cart" className="relative">
@@ -139,7 +147,7 @@ export function Navbar({ user: initialUser }: NavbarProps) {
                 size="icon"
                 className="rounded-full hover:bg-primary/10 hover:text-primary transition-colors"
               >
-                <ShoppingCart className="h-5 w-5" />
+                <ShoppingCart className="h-20 w-20 text-amber-600" />
               </Button>
               {/* {totalItems > 0 && (
 								<span className='absolute top-0 right-0 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-primary-foreground animate-in zoom-in'>
@@ -195,16 +203,16 @@ function UserMenu({ user, onLogout }: { user: any; onLogout: () => void }) {
       <DropdownMenuTrigger asChild>
         <Button
           variant="ghost"
-          className="relative h-10 flex items-center gap-2 pl-1 pr-3 rounded-full hover:bg-muted transition-all border border-transparent hover:border-muted"
+          className="relative h-10 flex items-center gap-2 pl-1 pr-3 rounded-full hover:bg-muted transition-all border border-transparent hover:border-amber-600"
         >
-          <Avatar className="h-8 w-8 border-2 border-background shadow-sm">
+          <Avatar className="h-8 w-8 border-2 border-amber-600 shadow-sm">
             <AvatarImage src={user.image} alt={user.name} />
-            <AvatarFallback className="bg-primary/10 text-primary text-xs">
+            <AvatarFallback className="bg-primary/10 text-amber-600 text-xs">
               {user.name?.slice(0, 2).toUpperCase()}
             </AvatarFallback>
           </Avatar>
           <div className="hidden md:flex flex-col items-start text-left leading-tight">
-            <span className="text-xs font-bold truncate max-w-[80px]">
+            <span className="text-xs font-bold truncate max-w-[80px] text-amber-600">
               {user.name}
             </span>
             <span className="text-[10px] text-muted-foreground font-medium">
@@ -315,8 +323,30 @@ function MobileMenu({ menu, pathname, user, onLogout }: any) {
       >
         <SheetHeader className="p-6 border-b bg-muted/20">
           <SheetTitle className="flex items-center gap-2">
-            <span className="bg-primary p-1 rounded-md text-sm">🍱</span>
-            <span className="font-bold tracking-tight">FoodHub</span>
+            <Link
+            href="/"
+            className="flex items-center gap-2 transition-transform hover:scale-105"
+          >
+            <div className=" ">
+              <GiChefToque className="text-3xl md:text-4xl lg:text-5xl text-amber-500 transition-all group-hover:rotate-12 group-hover:text-amber-400 hover:drop-shadow-[0_0_15px] hover:drop-shadow-500/50" />
+            </div>
+            <div className="inline-block">
+              <span
+                className="text-2xl md:text-xl lg:text-4xl 
+    bg-gradient-to-r from-amber-400 to-amber-600 
+    bg-clip-text text-transparent 
+    tracking-wider font-bold"
+              >
+                Food-Hub
+              </span>
+
+              <div
+                className="w-full h-[3px] bg-gradient-to-r 
+    from-amber-600/30 via-amber-400/50 to-amber-600/30 
+    mt-1 rounded-full"
+              ></div>
+            </div>
+          </Link>
           </SheetTitle>
         </SheetHeader>
 

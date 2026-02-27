@@ -1,10 +1,11 @@
 import { Toaster } from "@/components/ui/sonner";
-// import { CartProvider } from "@/providers/CartContext";
+
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { AuthProvider } from "@/providers/AuthContext";
+import { CartProvider } from "@/providers/CartContext";
 
 const inter = Inter({
 	subsets: ["latin"],
@@ -45,10 +46,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 					disableTransitionOnChange
 				>
 					<AuthProvider>
-						{/* <CartProvider> */}
+						<CartProvider>
 							<Toaster richColors />
 							{children}
-						{/* </CartProvider> */}
+						</CartProvider>
 					</AuthProvider>
 				</ThemeProvider>
 			</body>

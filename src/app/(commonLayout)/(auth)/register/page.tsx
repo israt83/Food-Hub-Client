@@ -9,7 +9,7 @@ export default async function RegisterPage() {
       <div className="grid w-full max-w-5xl min-h-[600px] lg:grid-cols-2 bg-background rounded-[2.5rem] overflow-hidden shadow-2xl border-none">
         <div className="relative hidden lg:block overflow-hidden">
           <img
-            src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070"
+            src="https://plus.unsplash.com/premium_photo-1675252369719-dd52bc69c3df?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
             alt="Join FoodHub"
             className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 hover:scale-105"
           />
@@ -22,8 +22,8 @@ export default async function RegisterPage() {
                 </p>
               </div>
               <h2 className="text-4xl font-black leading-tight italic uppercase text-white">
-                Join the <br />
-                <span className="text-green-500">Foodie</span> <br />
+                Welcome to the  <br />
+                <span className="text-amber-500">Food-Hub</span> <br />
                 Revolution.
               </h2>
             </div>
