@@ -1,6 +1,7 @@
 import { LoginForm } from "@/components/modules/authentication/LoginForm";
-import { UtensilsCrossed } from "lucide-react";
+
 import Link from "next/link";
+import { GiChefToque } from "react-icons/gi";
 
 export default async function LoginPage() {
 	return (
@@ -9,15 +10,30 @@ export default async function LoginPage() {
 				{/* LEFT SIDE: THE FORM */}
 				<div className='flex flex-col justify-center px-8 py-10 lg:px-12'>
 					<div className='mx-auto w-full max-w-[320px] space-y-6'>
-						<Link href='/' className='flex items-center gap-2 w-fit group'>
-							<div className='bg-primary p-1.5 rounded-lg group-hover:rotate-12 transition-transform'>
-								<UtensilsCrossed className='text-white' size={20} />
-							</div>
-							<span className='text-xl font-black tracking-tighter italic uppercase'>
-								Food<span className='text-primary'>Hub</span>
-							</span>
-						</Link>
+						<Link
+            href="/"
+            className="flex items-center gap-2 transition-transform hover:scale-105"
+          >
+            <div >
+              <GiChefToque className="text-3xl md:text-4xl lg:text-5xl text-amber-500 transition-all group-hover:rotate-12 group-hover:text-amber-400 hover:drop-shadow-[0_0_15px] hover:drop-shadow-500/50" />
+            </div>
+            <div className="inline-block">
+              <span
+                className="text-2xl md:text-xl lg:text-4xl 
+    bg-gradient-to-r from-amber-400 to-amber-600 
+    bg-clip-text text-transparent 
+    tracking-wider font-bold"
+              >
+                Food-Hub
+              </span>
 
+              <div
+                className="w-full h-[3px] bg-gradient-to-r 
+    from-amber-600/30 via-amber-400/50 to-amber-600/30 
+    mt-1 rounded-full"
+              ></div>
+            </div>
+          </Link>
 						<div className='space-y-1'>
 							<h1 className='text-3xl font-black tracking-tight italic uppercase leading-none'>
 								Welcome <span className='text-primary'>Back</span>
@@ -34,7 +50,7 @@ export default async function LoginPage() {
 				{/* RIGHT SIDE: THE VISUAL */}
 				<div className='relative hidden lg:block overflow-hidden'>
 					<img
-						src='https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=2070'
+						src=''
 						alt='Delicious Food Background'
 						className='absolute inset-0 h-full w-full object-cover'
 					/>

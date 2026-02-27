@@ -173,7 +173,14 @@ export function RegisterForm() {
 						<Button
 							type='submit'
 							disabled={isSubmitting}
-							className='w-full h-12 rounded-xl font-black text-md gap-2 shadow-lg mt-2 transition-all active:scale-95'
+							className='w-full h-12 rounded-2xl text-lg gap-2 
+	bg-gradient-to-r from-amber-500 to-amber-600 
+	hover:from-amber-600 hover:to-amber-700
+	text-white font-bold
+	shadow-lg shadow-amber-500/30
+	transition-all duration-300
+	active:scale-95
+	hover:shadow-amber-600/40'
 						>
 							{isSubmitting ? (
 								<Loader2 className='animate-spin size={18}' />
@@ -187,14 +194,14 @@ export function RegisterForm() {
 				/>
 			</form>
 
-			<Button
+			{/* <Button
 				onClick={handleGoogleSignup}
 				variant='outline'
 				type='button'
 				className='w-full h-10 rounded-xl border-2 font-black gap-2 text-xs transition-all active:scale-95'
 			>
 				<FcGoogle size={16} /> Google
-			</Button>
+			</Button> */}
 
 			<p className='text-center text-[11px] font-bold text-muted-foreground uppercase tracking-tight'>
 				Have an account?{" "}

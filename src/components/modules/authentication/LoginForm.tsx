@@ -141,33 +141,40 @@ export function LoginForm() {
 				<form.Subscribe
 					selector={state => [state.canSubmit, state.isSubmitting]}
 					children={([canSubmit, isSubmitting]) => (
-						<Button
-							type='submit'
-							className='w-full h-14 rounded-2xl font-black text-lg gap-2 shadow-xl shadow-primary/20 transition-all active:scale-95'
-							disabled={!canSubmit || isSubmitting}
-						>
-							{isSubmitting ? (
-								<Loader2 className='animate-spin' />
-							) : (
-								<>
-									Log In <ArrowRight size={20} />
-								</>
-							)}
-						</Button>
+					<Button
+	type="submit"
+	className="w-full h-12 rounded-2xl text-lg gap-2 
+	bg-gradient-to-r from-amber-500 to-amber-600 
+	hover:from-amber-600 hover:to-amber-700
+	text-white font-bold
+	shadow-lg shadow-amber-500/30
+	transition-all duration-300
+	active:scale-95
+	hover:shadow-amber-600/40"
+	disabled={!canSubmit || isSubmitting}
+>
+	{isSubmitting ? (
+		<Loader2 className="animate-spin h-5 w-5" />
+	) : (
+		<>
+			Log In <ArrowRight size={20} />
+		</>
+	)}
+</Button>
 					)}
 				/>
 			</form>
 
-			<div className='relative'>
+			{/* <div className='relative'>
 				<div className='absolute inset-0 flex items-center'>
 					<span className='w-full border-t border-muted' />
 				</div>
 				<div className='relative flex justify-center text-[10px] font-black uppercase tracking-widest text-muted-foreground'>
 					<span className='bg-background px-3'>Or continue with</span>
 				</div>
-			</div>
+			</div> */}
 
-			<Button
+			{/* <Button
 				onClick={handleGoogleLogin}
 				variant='outline'
 				type='button'
@@ -175,7 +182,7 @@ export function LoginForm() {
 			>
 				<FcGoogle className='h-6 w-6' />
 				Google Account
-			</Button>
+			</Button> */}
 
 			<p className='text-center text-sm font-bold text-muted-foreground'>
 				New here?{" "}

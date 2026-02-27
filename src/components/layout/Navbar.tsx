@@ -78,21 +78,22 @@ export function Navbar({ user: initialUser }: NavbarProps) {
             <div className=" ">
               <GiChefToque className="text-3xl md:text-4xl lg:text-5xl text-amber-500 transition-all group-hover:rotate-12 group-hover:text-amber-400 hover:drop-shadow-[0_0_15px] hover:drop-shadow-500/50" />
             </div>
-          <div className="inline-block">
-  <span
-    className="text-2xl md:text-xl lg:text-4xl 
+            <div className="inline-block">
+              <span
+                className="text-2xl md:text-xl lg:text-4xl 
     bg-gradient-to-r from-amber-400 to-amber-600 
     bg-clip-text text-transparent 
     tracking-wider font-bold"
-  >
-    Food-Hub
-  </span>
+              >
+                Food-Hub
+              </span>
 
-  <div className="w-full h-[3px] bg-gradient-to-r 
+              <div
+                className="w-full h-[3px] bg-gradient-to-r 
     from-amber-600/30 via-amber-400/50 to-amber-600/30 
-    mt-1 rounded-full">
-  </div>
-</div>
+    mt-1 rounded-full"
+              ></div>
+            </div>
           </Link>
 
           {/* DESKTOP MENU */}
@@ -150,20 +151,34 @@ export function Navbar({ user: initialUser }: NavbarProps) {
 
           {/* USER PROFILE / AUTH */}
           {currentUser ? (
-						<UserMenu user={currentUser} onLogout={onLogout} />
-					) : (
-						<div className='flex items-center gap-2'>
-							<Button asChild variant='ghost' size='sm' className='rounded-full hidden sm:flex'>
-								<Link href='/login'>Sign In</Link>
-							</Button>
-							<Button asChild size='sm' className='rounded-full shadow-md shadow-primary/20'>
-								<Link href='/register'>Get Started</Link>
-							</Button>
-						</div>
-					)}
+            <UserMenu user={currentUser} onLogout={onLogout} />
+          ) : (
+            <div className="flex items-center gap-2">
+              <Button
+                asChild
+                variant="ghost"
+                size="sm"
+                className="rounded-full hidden sm:flex"
+              >
+                <Link href="/login">Sign In</Link>
+              </Button>
+              <Button
+                asChild
+                size="sm"
+                className="rounded-full shadow-md shadow-primary/20"
+              >
+                <Link href="/register">Get Started</Link>
+              </Button>
+            </div>
+          )}
 
           {/* MOBILE TOGGLE */}
-          <MobileMenu menu={menu} pathname={pathname} user={currentUser} onLogout={onLogout} />
+          <MobileMenu
+            menu={menu}
+            pathname={pathname}
+            user={currentUser}
+            onLogout={onLogout}
+          />
         </div>
       </div>
     </header>
