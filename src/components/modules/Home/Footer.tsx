@@ -66,7 +66,7 @@ export function Footer() {
 					<div className='lg:col-span-8 grid grid-cols-2 md:grid-cols-3 gap-8'>
 						{/* EXPLORE */}
 						<div className='space-y-4'>
-							<h4 className='text-xs font-bold uppercase tracking-[0.2em] text-foreground/50'>
+							<h4 className='text-xs font-bold uppercase tracking-[0.2em]  text-amber-600'>
 								Explore
 							</h4>
 							<ul className='space-y-3'>
@@ -86,7 +86,7 @@ export function Footer() {
 
 						{/* PARTNERS */}
 						<div className='space-y-4'>
-							<h4 className='text-xs font-bold uppercase tracking-[0.2em] text-foreground/50'>
+							<h4 className='text-xs font-bold uppercase tracking-[0.2em] text-amber-600'>
 								For Partners
 							</h4>
 							<ul className='space-y-3'>
@@ -106,7 +106,7 @@ export function Footer() {
 
 						{/* CONTACT / NEWSLETTER */}
 						<div className='space-y-4 col-span-2 md:col-span-1'>
-							<h4 className='text-xs font-bold uppercase tracking-[0.2em] text-foreground/50'>
+							<h4 className='text-xs font-bold uppercase tracking-[0.2em] text-amber-600'>
 								Contact
 							</h4>
 							<ul className='space-y-3 text-sm text-muted-foreground'>
