@@ -59,12 +59,12 @@ export function RegisterForm() {
 		},
 	});
 
-	const handleGoogleSignup = async () => {
-		await authClient.signIn.social({
-			provider: "google",
-			callbackURL: window.location.origin,
-		});
-	};
+	// const handleGoogleSignup = async () => {
+	// 	await authClient.signIn.social({
+	// 		provider: "google",
+	// 		callbackURL: window.location.origin,
+	// 	});
+	// };
 
 	return (
 		<div className='space-y-4'>

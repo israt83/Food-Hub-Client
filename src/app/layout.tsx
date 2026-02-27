@@ -1,4 +1,4 @@
-// import { Toaster } from "@/components/ui/sonner";
+import { Toaster } from "@/components/ui/sonner";
 // import { CartProvider } from "@/providers/CartContext";
 import { ThemeProvider } from "@/providers/ThemeProvider";
 import type { Metadata } from "next";
@@ -46,7 +46,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				>
 					<AuthProvider>
 						{/* <CartProvider> */}
-							{/* <Toaster richColors /> */}
+							<Toaster richColors />
 							{children}
 						{/* </CartProvider> */}
 					</AuthProvider>
