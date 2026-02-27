@@ -1,6 +1,6 @@
 "use client";
 
-// import { authClient } from "@/lib/auth-client";
+import { authClient } from "@/lib/auth-client";
 import {
   ChevronDown,
   LayoutDashboard,
@@ -35,7 +35,7 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import { GiChefToque } from "react-icons/gi";
-// import { useAuth } from "@/providers/AuthContext";
+import { useAuth } from "@/providers/AuthContext";
 // import { useCart } from "@/providers/CartContext";
 // import { NavbarProps } from "@/types";
 
@@ -45,9 +45,9 @@ export function Navbar({ user: initialUser }: NavbarProps) {
   const { theme, setTheme } = useTheme();
   // const { totalItems } = useCart();
 
-  // const { data: session } = useAuth();
+  const { data: session } = useAuth();
   // Casting for role access
-  // const currentUser = (session?.user as any) ?? initialUser;
+  const currentUser = (session?.user as any) ?? initialUser;
 
   const menu = [
     { title: "Home", url: "/" },
@@ -149,7 +149,7 @@ export function Navbar({ user: initialUser }: NavbarProps) {
           </div>
 
           {/* USER PROFILE / AUTH */}
-          {/* {currentUser ? (
+          {currentUser ? (
 						<UserMenu user={currentUser} onLogout={onLogout} />
 					) : (
 						<div className='flex items-center gap-2'>
@@ -160,10 +160,10 @@ export function Navbar({ user: initialUser }: NavbarProps) {
 								<Link href='/register'>Get Started</Link>
 							</Button>
 						</div>
-					)} */}
+					)}
 
           {/* MOBILE TOGGLE */}
-          {/* <MobileMenu menu={menu} pathname={pathname} user={currentUser} onLogout={onLogout} /> */}
+          <MobileMenu menu={menu} pathname={pathname} user={currentUser} onLogout={onLogout} />
         </div>
       </div>
     </header>
