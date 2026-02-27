@@ -1,7 +1,8 @@
 // import { CategoriesSection } from "@/components/modules/home/CategoriesSection";
 // import { FeaturedProviders } from "@/components/modules/home/FeaturedProvider";
-// import { Footer } from "@/components/modules/home/Footer";
+
 import { Hero } from "@/components/modules/home/Hero";
+import { Footer } from "@/components/modules/Home/Footer";
 // import { HowItWorks } from "@/components/modules/home/HowItWorks";
 // import { ReadyToOrder } from "@/components/modules/home/ReadyToOrder";
 // import { Testimonials } from "@/components/modules/home/Testimonials";
@@ -19,8 +20,8 @@ export default async function HomePage() {
 			<FeaturedProviders providers={providersRes.data} /> */}
 			{/* <HowItWorks />
 			<Testimonials />
-			<ReadyToOrder />
-			<Footer /> */}
+			<ReadyToOrder /> */}
+			<Footer />
 		</div>
 	);
 }
