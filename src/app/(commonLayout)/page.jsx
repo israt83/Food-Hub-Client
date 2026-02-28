@@ -1,26 +1,26 @@
-// import { CategoriesSection } from "@/components/modules/home/CategoriesSection";
-// import { FeaturedProviders } from "@/components/modules/home/FeaturedProvider";
+import { CategoriesSection } from "@/components/modules/home/CategoriesSection";
+import { FeaturedProviders } from "@/components/modules/home/FeaturedProvider";
 
 import { Hero } from "@/components/modules/home/Hero";
 import { Footer } from "@/components/modules/Home/Footer";
-// import { HowItWorks } from "@/components/modules/home/HowItWorks";
-// import { ReadyToOrder } from "@/components/modules/home/ReadyToOrder";
-// import { Testimonials } from "@/components/modules/home/Testimonials";
-// import { categoryService } from "@/service/category.service";
-// import { providerService } from "@/service/provider.service";
+import { HowItWorks } from "@/components/modules/home/HowItWorks";
+import { ReadyToOrder } from "@/components/modules/home/ReadyToOrder";
+import { Testimonials } from "@/components/modules/home/Testimonials";
+import { categoryService } from "@/service/category.service";
+import { providerService } from "@/service/provider.service";
 
 export default async function HomePage() {
-	// const categoriesRes = await categoryService.getAll();
-	// const providersRes = await providerService.getPublicProviders();
+	const categoriesRes = await categoryService.getAll();
+	const providersRes = await providerService.getPublicProviders();
 
 	return (
 		<div>
 			<Hero />
-			{/* <CategoriesSection categories={categoriesRes.data} />
-			<FeaturedProviders providers={providersRes.data} /> */}
-			{/* <HowItWorks />
+			<CategoriesSection categories={categoriesRes.data} />
+			<FeaturedProviders providers={providersRes.data} />
+			<HowItWorks />
 			<Testimonials />
-			<ReadyToOrder /> */}
+			<ReadyToOrder />
 			<Footer />
 		</div>
 	);
