@@ -36,14 +36,14 @@ import {
 } from "@/components/ui/sheet";
 import { GiChefToque } from "react-icons/gi";
 import { useAuth } from "@/providers/AuthContext";
-// import { useCart } from "@/providers/CartContext";
-// import { NavbarProps } from "@/types";
+import { useCart } from "@/providers/CartContext";
+import { NavbarProps } from "@/types";
 
 export function Navbar({ user: initialUser }: NavbarProps) {
   const pathname = usePathname();
   const router = useRouter();
   const { theme, setTheme } = useTheme();
-  // const { totalItems } = useCart();
+  const { totalItems } = useCart();
 
   const { data: session } = useAuth();
   // Casting for role access
@@ -149,11 +149,11 @@ export function Navbar({ user: initialUser }: NavbarProps) {
               >
                 <ShoppingCart className="h-20 w-20 text-amber-600" />
               </Button>
-              {/* {totalItems > 0 && (
+              {totalItems > 0 && (
 								<span className='absolute top-0 right-0 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-primary-foreground animate-in zoom-in'>
 									{totalItems}
 								</span>
-							)} */}
+							)}
             </Link>
           </div>
 
@@ -278,7 +278,7 @@ function UserMenu({ user, onLogout }: { user: any; onLogout: () => void }) {
                 href={
                   user.role === "PROVIDER"
                     ? "/provider-dashboard/overview"
-                    : "/admin-dashboard"
+                    : "/admin-dashboard/users"
                 }
                 className="flex items-center gap-2 w-full"
               >
