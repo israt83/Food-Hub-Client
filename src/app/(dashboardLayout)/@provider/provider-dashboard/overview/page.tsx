@@ -16,13 +16,13 @@ export default function ProviderOverview() {
 			<div className='flex flex-col md:flex-row md:items-center justify-between gap-6'>
 				<div className='space-y-1'>
 					<h1 className='text-4xl font-black tracking-tight italic uppercase'>
-						Chef <span className='text-emerald-500'>Dashboard</span>
+						Chef <span className='text-amber-500'>Dashboard</span>
 					</h1>
 					<p className='text-muted-foreground font-medium'>
 						Here is what&apos;s happening with your kitchen today.
 					</p>
 				</div>
-				<Button className='h-14 px-8 rounded-2xl font-black text-emerald-50 text-md bg-emerald-600 hover:bg-emerald-700 shadow-xl shadow-emerald-500/20 gap-2'>
+				<Button className='h-14 px-8 rounded-2xl font-black text-amber-50 text-md bg-amber-600 hover:bg-amber-700 shadow-xl shadow-amber-500/20 gap-2'>
 					<ShoppingBag size={20} /> View Active Orders
 				</Button>
 			</div>
@@ -34,8 +34,8 @@ export default function ProviderOverview() {
 						label: "Total Revenue",
 						value: "17,66,322.22",
 						icon: DollarSign,
-						color: "text-emerald-500",
-						bg: "bg-emerald-500/10",
+						color: "text-amber-500",
+						bg: "bg-amber-500/10",
 					},
 					{
 						label: "Active Orders",
@@ -61,13 +61,13 @@ export default function ProviderOverview() {
 				].map((stat, i) => (
 					<div
 						key={i}
-						className='bg-card border-2 border-muted p-6 rounded-[2rem] hover:border-emerald-500/30 transition-all group'
+						className='bg-card border-2 border-muted p-6 rounded-[2rem] hover:border-amber-500/30 transition-all group'
 					>
 						<div className='flex items-center justify-between mb-4'>
 							<div className={`p-3 ${stat.bg} ${stat.color} rounded-2xl`}>
 								<stat.icon size={24} />
 							</div>
-							<div className='flex items-center gap-1 text-[10px] font-black text-emerald-500 bg-emerald-500/5 px-2 py-1 rounded-lg'>
+							<div className='flex items-center gap-1 text-[10px] font-black text-amber-500 bg-amber-500/5 px-2 py-1 rounded-lg'>
 								<TrendingUp size={12} /> +12%
 							</div>
 						</div>
@@ -81,12 +81,12 @@ export default function ProviderOverview() {
 				))}
 			</div>
 
-			<div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
+			<div className=''>
 				{/* --- RECENT ORDERS TABLE (Simplified) --- */}
 				<div className='lg:col-span-2 bg-card border-2 border-muted rounded-[2.5rem] p-8 space-y-6'>
 					<div className='flex items-center justify-between'>
 						<h2 className='text-2xl font-black italic uppercase'>
-							Recent <span className='text-emerald-500'>Orders</span>
+							Recent <span className='text-amber-500'>Orders</span>
 						</h2>
 						<Button
 							variant='ghost'
@@ -109,12 +109,12 @@ export default function ProviderOverview() {
 									<div>
 										<p className='font-bold text-sm'>Kacchi Biryani (Full)</p>
 										<p className='text-[10px] font-black text-muted-foreground uppercase'>
-											Customer: Al Amin Sheikh
+											Customer: Customer User
 										</p>
 									</div>
 								</div>
 								<div className='text-right'>
-									<p className='font-black text-sm text-emerald-600'>৳850.00</p>
+									<p className='font-black text-sm text-amber-600'>৳550.00</p>
 									<span className='text-[9px] font-black bg-orange-500/10 text-orange-600 px-2 py-0.5 rounded-full uppercase italic'>
 										Preparing
 									</span>
@@ -125,8 +125,8 @@ export default function ProviderOverview() {
 				</div>
 
 				{/* --- SHOP PERFORMANCE / QUICK ACTIONS --- */}
-				<div className='space-y-6'>
-					<div className='bg-emerald-600 p-8 rounded-[2.5rem] text-white shadow-2xl shadow-emerald-500/20 relative overflow-hidden group'>
+				{/* <div className='space-y-6'>
+					<div className='bg-amber-600 p-8 rounded-[2.5rem] text-white shadow-2xl shadow-amber-500/20 relative overflow-hidden group'>
 						<div className='relative z-10 space-y-4'>
 							<h3 className='text-xl font-black italic uppercase'>
 								Kitchen <br /> Status
@@ -134,7 +134,7 @@ export default function ProviderOverview() {
 							<p className='text-sm font-medium opacity-80'>
 								Your shop is currently accepting orders.
 							</p>
-							<Button className='w-full bg-white text-emerald-600 hover:bg-emerald-50 rounded-2xl font-black uppercase italic text-xs h-12'>
+							<Button className='w-full bg-white text-amber-600 hover:bg-amber-50 rounded-2xl font-black uppercase italic text-xs h-12'>
 								Go Offline
 							</Button>
 						</div>
@@ -145,21 +145,21 @@ export default function ProviderOverview() {
 
 					<div className='bg-card border-2 border-muted p-8 rounded-[2.5rem] space-y-4'>
 						<h3 className='text-lg font-black italic uppercase'>
-							Quick <span className='text-emerald-500'>Links</span>
+							Quick <span className='text-amber-500'>Links</span>
 						</h3>
 						<div className='grid grid-cols-1 gap-2'>
 							{["Add New Item", "Edit Menu", "Payment Settings", "Kitchen Staff"].map(link => (
 								<Button
 									key={link}
 									variant='outline'
-									className='justify-start h-12 rounded-xl border-muted hover:border-emerald-500 font-bold text-xs'
+									className='justify-start h-12 rounded-xl border-muted hover:border-amber-500 font-bold text-xs'
 								>
 									{link}
 								</Button>
 							))}
 						</div>
 					</div>
-				</div>
+				</div> */}
 			</div>
 		</div>
 	);

@@ -11,32 +11,32 @@ export async function MealReviews({ mealId }: { mealId: string }) {
 			{/* --- STATS OVERVIEW --- */}
 			<div className='flex flex-col md:flex-row items-center justify-between gap-6 border-b-2 border-muted pb-8'>
 				<div className='space-y-2'>
-					<div className='flex items-center gap-2 text-emerald-600'>
+					<div className='flex items-center gap-2 text-amber-600'>
 						<MessageSquare size={18} />
 						<span className='text-[10px] font-black uppercase tracking-[0.3em]'>
 							Customer Feedback
 						</span>
 					</div>
 					<h2 className='text-4xl font-black tracking-tight italic uppercase'>
-						Taste <span className='text-emerald-500'>Testimonials</span>
+						Taste <span className='text-amber-500'>Testimonials</span>
 					</h2>
 				</div>
 
-				<div className='flex items-center gap-6 bg-emerald-500/10 px-8 py-4 rounded-[2rem] border-2 border-emerald-500/20'>
+				<div className='flex items-center gap-6 bg-amber-500/10 px-8 py-4 rounded-[2rem] border-2 border-amber-500/20'>
 					<div className='text-center'>
-						<p className='text-4xl font-black text-emerald-600 leading-none'>
+						<p className='text-4xl font-black text-amber-600 leading-none'>
 							{stats.averageRating.toFixed(1)}
 						</p>
-						<p className='text-[8px] font-black uppercase tracking-widest text-emerald-700/60 mt-1'>
+						<p className='text-[8px] font-black uppercase tracking-widest text-amber-700/60 mt-1'>
 							Avg Rating
 						</p>
 					</div>
-					<div className='h-10 w-[2px] bg-emerald-500/20' />
+					<div className='h-10 w-[2px] bg-amber-500/20' />
 					<div className='text-center'>
-						<p className='text-4xl font-black text-emerald-600 leading-none'>
+						<p className='text-4xl font-black text-amber-600 leading-none'>
 							{stats.totalReviews}
 						</p>
-						<p className='text-[8px] font-black uppercase tracking-widest text-emerald-700/60 mt-1'>
+						<p className='text-[8px] font-black uppercase tracking-widest text-amber-700/60 mt-1'>
 							Reviews
 						</p>
 					</div>
@@ -55,10 +55,10 @@ export async function MealReviews({ mealId }: { mealId: string }) {
 					{reviews.map((review: any) => (
 						<div
 							key={review.id}
-							className='relative bg-card border-2 border-muted p-8 rounded-[2.5rem] hover:border-emerald-500/30 transition-all group'
+							className='relative bg-card border-2 border-muted p-8 rounded-[2.5rem] hover:border-amber-500/30 transition-all group'
 						>
 							<Quote
-								className='absolute top-6 right-8 text-muted/20 group-hover:text-emerald-500/20 transition-colors'
+								className='absolute top-6 right-8 text-muted/20 group-hover:text-amber-500/20 transition-colors'
 								size={40}
 							/>
 
@@ -68,7 +68,7 @@ export async function MealReviews({ mealId }: { mealId: string }) {
 										key={i}
 										size={14}
 										className={
-											i < review.rating ? "fill-emerald-500 text-emerald-500" : "text-muted"
+											i < review.rating ? "fill-amber-500 text-amber-500" : "text-muted"
 										}
 									/>
 								))}
@@ -80,7 +80,7 @@ export async function MealReviews({ mealId }: { mealId: string }) {
 
 							<div className='flex items-center justify-between border-t border-muted/50 pt-6'>
 								<div className='flex items-center gap-3'>
-									<div className='h-10 w-10 rounded-xl bg-muted flex items-center justify-center font-black text-muted-foreground uppercase border-2 border-muted group-hover:border-emerald-500/50 transition-all'>
+									<div className='h-10 w-10 rounded-xl bg-muted flex items-center justify-center font-black text-muted-foreground uppercase border-2 border-muted group-hover:border-amber-500/50 transition-all'>
 										{review.customer.name.charAt(0)}
 									</div>
 									<div>
@@ -92,8 +92,8 @@ export async function MealReviews({ mealId }: { mealId: string }) {
 										</p>
 									</div>
 								</div>
-								<div className='bg-emerald-500/5 px-3 py-1 rounded-full border border-emerald-500/10'>
-									<span className='text-[8px] font-black text-emerald-600 uppercase italic tracking-tighter italic'>
+								<div className='bg-amber-500/5 px-3 py-1 rounded-full border border-amber-500/10'>
+									<span className='text-[8px] font-black text-amber-600 uppercase italic tracking-tighter italic'>
 										Verified Diner
 									</span>
 								</div>

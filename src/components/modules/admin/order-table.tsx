@@ -36,7 +36,7 @@ export function AdminOrderTable({ orders }: { orders: AdminOrder[] }) {
 							<tr key={order.id} className='hover:bg-muted/10 transition-all group'>
 								{/* Order ID */}
 								<td className='px-8 py-5'>
-									<span className='font-mono text-xs font-black italic text-muted-foreground group-hover:text-emerald-600 transition-colors'>
+									<span className='font-mono text-xs font-black italic text-muted-foreground group-hover:text-amber-600 transition-colors'>
 										#{order.id.slice(-8).toUpperCase()}
 									</span>
 								</td>
@@ -45,7 +45,7 @@ export function AdminOrderTable({ orders }: { orders: AdminOrder[] }) {
 								<td className='px-8 py-5'>
 									<div className='flex flex-col gap-2'>
 										<div className='flex items-center gap-2'>
-											<User size={12} className='text-emerald-500' />
+											<User size={12} className='text-amber-500' />
 											<span className='text-xs font-black uppercase italic'>
 												{order.customer.name}
 											</span>
@@ -62,7 +62,7 @@ export function AdminOrderTable({ orders }: { orders: AdminOrder[] }) {
 								{/* Financials */}
 								<td className='px-8 py-5 text-center'>
 									<div className='flex flex-col items-center gap-0.5'>
-										<span className='font-black text-emerald-600 italic'>
+										<span className='font-black text-amber-600 italic'>
 											৳{order.totalPrice.toLocaleString("en-IN", { minimumFractionDigits: 2 })}
 										</span>
 										<span className='text-[8px] font-black uppercase text-muted-foreground tracking-widest'>
@@ -108,7 +108,7 @@ function StatusBadge({ status }: { status: AdminOrder["status"] }) {
 		PLACED: "bg-blue-500/10 text-blue-600 border-blue-500/20",
 		PREPARING: "bg-orange-500/10 text-orange-600 border-orange-500/20",
 		READY: "bg-purple-500/10 text-purple-600 border-purple-500/20",
-		DELIVERED: "bg-emerald-500/10 text-emerald-600 border-emerald-500/20",
+		DELIVERED: "bg-amber-500/10 text-amber-600 border-amber-500/20",
 		CANCELLED: "bg-red-500/10 text-red-600 border-red-500/20",
 	};
 

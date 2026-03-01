@@ -49,12 +49,12 @@ export function HowItWorks() {
 				<div className='mb-20 text-center space-y-4'>
 					<Badge
 						variant='outline'
-						className='px-4 py-1 rounded-full border-primary/30 text-primary bg-primary/5'
+						className='px-4 py-1 rounded-full border-amber-600 text-primary bg-primary/5'
 					>
 						Simple Process
 					</Badge>
 					<h2 className='text-4xl font-black tracking-tight sm:text-5xl'>
-						How <span className='text-primary'>FoodHub</span> Works
+						How <span className='text-amber-600'>FoodHub</span> Works
 					</h2>
 					<p className='mx-auto max-w-xl text-lg text-muted-foreground'>
 						Getting fresh, delicious meals has never been this easy. Follow these four simple steps.

@@ -32,7 +32,7 @@ export function ReadyToOrder() {
 						</div>
 
 						<h2 className='text-3xl font-black leading-tight tracking-tight sm:text-4xl lg:text-5xl text-white'>
-							Hungry? Get <span className='text-[#FF7043]'>20% Off</span>
+							Hungry? Get <span className='text-amber-600'>20% Off</span>
 						</h2>
 
 						<p className='max-w-md text-base text-slate-400'>
@@ -43,7 +43,7 @@ export function ReadyToOrder() {
 							<Button
 								asChild
 								size='lg'
-								className='h-12 bg-[#FF7043] hover:bg-[#f4511e] text-white rounded-xl px-8 shadow-lg shadow-orange-500/20 transition-all hover:scale-105'
+								className='h-12 bg-amber-600 hover:bg-amber-700 text-white rounded-xl px-8 shadow-lg shadow-amber-500/20 transition-all hover:scale-105'
 							>
 								<Link href='/meals' className='gap-2'>
 									Order Now
@@ -53,9 +53,9 @@ export function ReadyToOrder() {
 
 							<button
 								onClick={copyCoupon}
-								className='group flex items-center gap-3 rounded-xl border border-dashed border-slate-700 bg-white/5 px-4 py-2.5 transition-all hover:bg-white/10 hover:border-[#FF7043]'
+								className='group flex items-center gap-3 rounded-xl border border-dashed border-slate-700 bg-white/5 px-4 py-2.5 transition-all hover:bg-white/10 hover:border-amber-600'
 							>
-								<Ticket size={18} className='text-[#FF7043]' />
+								<Ticket size={18} className='text-amber-600' />
 								<div className='text-left leading-tight'>
 									<p className='text-[9px] font-bold uppercase tracking-widest text-slate-500'>
 										Code
@@ -76,7 +76,7 @@ export function ReadyToOrder() {
 							/>
 							{/* Smaller Floating Badge */}
 							<div className='absolute -bottom-3 -right-3 rounded-2xl bg-white px-3 py-2 text-slate-900 shadow-xl'>
-								<p className='text-lg font-black text-[#FF7043] leading-none'>4.9/5</p>
+								<p className='text-lg font-black text-amber-600 leading-none'>4.9/5</p>
 								<p className='text-[8px] font-bold uppercase tracking-widest text-slate-500'>
 									Rating
 								</p>

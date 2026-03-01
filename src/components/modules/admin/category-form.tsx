@@ -42,7 +42,7 @@ export function CategoryForm() {
 					/>
 					<Input
 						placeholder='e.g. Traditional, Fast Food'
-						className='h-14 pl-12 rounded-2xl border-2 bg-muted/20 font-bold focus:border-emerald-500 transition-all'
+						className='h-14 pl-12 rounded-2xl border-2 bg-muted/20 font-bold focus:border-amber-500 transition-all'
 						value={name}
 						onChange={e => setName(e.target.value)}
 					/>
@@ -52,7 +52,7 @@ export function CategoryForm() {
 			<Button
 				onClick={handleCreate}
 				disabled={pending}
-				className='w-full h-14 rounded-2xl font-black text-lg gap-3 bg-emerald-600 hover:bg-emerald-700 shadow-xl shadow-emerald-500/20 active:scale-95 transition-all text-white'
+				className='w-full h-14 rounded-2xl font-black text-lg gap-3 bg-amber-600 hover:bg-amber-700 shadow-xl shadow-amber-500/20 active:scale-95 transition-all text-white'
 			>
 				{pending ? (
 					<Loader2 className='animate-spin' />

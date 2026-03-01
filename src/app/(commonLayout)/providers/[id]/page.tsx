@@ -29,7 +29,7 @@ export default async function ProviderDetailsPage({ params }: { params: Promise<
 						<div
 							className={`px-4 py-1 rounded-full text-[10px] font-black uppercase italic border-2 ${
 								isOpen
-									? "bg-emerald-500/10 border-emerald-500/20 text-emerald-600"
+									? "bg-emerald-500/10 border-amber-500/20 text-amber-600"
 									: "bg-red-500/10 border-red-500/20 text-red-600"
 							}`}
 						>
@@ -43,10 +43,10 @@ export default async function ProviderDetailsPage({ params }: { params: Promise<
 
 					<div className='flex flex-wrap gap-6 pt-4'>
 						<div className='flex items-center gap-2 font-black uppercase text-[10px] tracking-widest text-muted-foreground'>
-							<MapPin size={16} className='text-emerald-500' /> {address}
+							<MapPin size={16} className='text-amber-500' /> {address}
 						</div>
 						<div className='flex items-center gap-2 font-black uppercase text-[10px] tracking-widest text-muted-foreground'>
-							<Phone size={16} className='text-emerald-500' /> {phone}
+							<Phone size={16} className='text-amber-500' /> {phone}
 						</div>
 					</div>
 				</div>
@@ -65,7 +65,7 @@ export default async function ProviderDetailsPage({ params }: { params: Promise<
 						<span className='font-black uppercase text-[10px] tracking-widest text-muted-foreground'>
 							Experience
 						</span>
-						<span className='font-black italic text-emerald-600'>Pro Chef</span>
+						<span className='font-black italic text-amber-600'>Pro Chef</span>
 					</div>
 				</div>
 			</div>
@@ -73,11 +73,11 @@ export default async function ProviderDetailsPage({ params }: { params: Promise<
 			{/* --- MENU SECTION --- */}
 			<div className='space-y-8'>
 				<div className='flex items-center gap-4'>
-					<div className='bg-emerald-600 p-2 rounded-xl text-white'>
+					<div className='bg-amber-600 p-2 rounded-xl text-white'>
 						<Utensils size={24} />
 					</div>
 					<h2 className='text-3xl font-black italic uppercase'>
-						Our <span className='text-emerald-500'>Menu</span>
+						Our <span className='text-amber-500'>Menu</span>
 					</h2>
 				</div>
 

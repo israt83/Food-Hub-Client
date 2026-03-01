@@ -130,7 +130,7 @@ export default function CheckoutPage() {
 						</div>
 
 						<Button
-							className='w-full h-16 rounded-[1.5rem] font-black text-xl shadow-xl shadow-primary/20 transition-all hover:scale-[1.01] active:scale-95'
+							className='w-full h-16 rounded-[1.5rem] font-black text-xl shadow-xl bg-amber-600 text-white transition-all hover:scale-[1.01] active:scale-95 hover:bg-amber-600'
 							onClick={handlePlaceOrder}
 							disabled={loading}
 						>

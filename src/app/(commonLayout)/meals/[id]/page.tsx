@@ -83,7 +83,7 @@ export default async function MealDetailsPage({ params }: { params: Promise<{ id
 						<div className='absolute top-6 left-6 flex flex-col gap-3'>
 							{meal.dietaryType !== "NONE" && (
 								<Badge className='bg-white/95 backdrop-blur-md text-slate-900 border-none font-black px-4 py-1.5 rounded-full shadow-xl italic'>
-									<Leaf className='mr-2 h-4 w-4 text-emerald-600' />
+									<Leaf className='mr-2 h-4 w-4 text-amber-600' />
 									{meal.dietaryType}
 								</Badge>
 							)}
@@ -102,7 +102,7 @@ export default async function MealDetailsPage({ params }: { params: Promise<{ id
 							</div>
 						</div>
 						<div className='flex flex-col items-center gap-2 border-x border-muted/50'>
-							<Star className='h-6 w-6 text-emerald-500 fill-emerald-500' />
+							<Star className='h-6 w-6 text-amber-500 fill-amber-500' />
 							<div className='text-center'>
 								<p className='text-[10px] uppercase font-black text-muted-foreground tracking-tighter'>
 									Rating
@@ -170,7 +170,7 @@ export default async function MealDetailsPage({ params }: { params: Promise<{ id
 										</h4>
 										<div className='flex items-center gap-2 mt-2'>
 											<div
-												className={`h-2 w-2 rounded-full ${meal.provider.isOpen ? "bg-emerald-500 shadow-[0_0_8px_rgba(34,197,94,0.6)]" : "bg-red-500"}`}
+												className={`h-2 w-2 rounded-full ${meal.provider.isOpen ? "bg-amber-500 shadow-[0_0_8px_rgba(34,197,94,0.6)]" : "bg-red-500"}`}
 											/>
 											<span className='text-[10px] font-black uppercase text-muted-foreground italic'>
 												{meal.provider.isOpen ? "Open Now" : "Closed"}

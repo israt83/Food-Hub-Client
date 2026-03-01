@@ -16,6 +16,7 @@ import {
 } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import { GiChefToque } from "react-icons/gi";
 import { toast } from "sonner";
 
 
@@ -46,11 +47,18 @@ export function Sidebar({ role }: SidebarProps) {
 			{/* BRAND & QUICK EXIT */}
 			<div className='px-6 py-6'>
 				<div className='flex items-center gap-2 mb-6'>
-					<div className='bg-primary p-1.5 rounded-lg'>
-						<span className='text-xl'>🍱</span>
+					<div className=''>
+							<GiChefToque className="text-xl lg:text-5xl text-amber-500 transition-all group-hover:rotate-12 group-hover:text-amber-400 hover:drop-shadow-[0_0_15px] hover:drop-shadow-500/50" />
 					</div>
 					<div>
-						<h2 className='text-sm font-bold tracking-tight'>FoodHub</h2>
+						<span
+                className="text-xl md:text-xl lg:text-2xl 
+    bg-gradient-to-r from-amber-400 to-amber-600 
+    bg-clip-text text-transparent 
+    tracking-wider font-bold"
+              >
+                Food-Hub
+              </span>
 						<p className='text-[10px] uppercase tracking-widest text-muted-foreground font-semibold'>
 							{role} Panel
 						</p>

@@ -35,7 +35,7 @@ export function AdminUserTable({ users }: { users: User[] }) {
 								{/* Identity */}
 								<td className='px-8 py-5'>
 									<div className='flex items-center gap-4'>
-										<div className='h-10 w-10 rounded-xl bg-muted flex items-center justify-center font-black text-muted-foreground border-2 border-muted group-hover:border-emerald-500/50 transition-all uppercase'>
+										<div className='h-10 w-10 rounded-xl bg-muted flex items-center justify-center font-black text-muted-foreground border-2 border-muted group-hover:border-amber-500/50 transition-all uppercase'>
 											{user.name.charAt(0)}
 										</div>
 										<div>
@@ -43,7 +43,7 @@ export function AdminUserTable({ users }: { users: User[] }) {
 												{user.name}
 											</p>
 											<div className='flex items-center gap-1 text-[10px] font-bold text-muted-foreground lowercase'>
-												<Mail size={10} className='text-emerald-500' /> {user.email}
+												<Mail size={10} className='text-amber-500' /> {user.email}
 											</div>
 										</div>
 									</div>
@@ -69,12 +69,12 @@ export function AdminUserTable({ users }: { users: User[] }) {
 									<div
 										className={`inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[9px] font-black uppercase italic ${
 											user.status === "ACTIVE"
-												? "bg-emerald-500/10 text-emerald-600"
+												? "bg-amber-500/10 text-green-800"
 												: "bg-red-500/10 text-red-600"
 										}`}
 									>
 										<div
-											className={`h-1.5 w-1.5 rounded-full animate-pulse ${user.status === "ACTIVE" ? "bg-emerald-500" : "bg-red-500"}`}
+											className={`h-1.5 w-1.5 rounded-full animate-pulse ${user.status === "ACTIVE" ? "bg-green-600" : "bg-red-500"}`}
 										/>
 										{user.status}
 									</div>

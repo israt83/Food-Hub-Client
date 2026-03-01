@@ -90,7 +90,7 @@ function CategoryRow({ category, onDelete }: { category: Category; onDelete: () 
 		<tr className='hover:bg-muted/10 transition-all group'>
 			<td className='px-8 py-5'>
 				<Input
-					className={`h-10 rounded-xl border-2 font-bold transition-all ${hasChanged ? "border-emerald-500 bg-emerald-500/5" : "border-transparent bg-transparent hover:border-muted hover:bg-muted/20"}`}
+					className={`h-10 rounded-xl border-2 font-bold transition-all ${hasChanged ? "border-amber-500 bg-amber-500/5" : "border-transparent bg-transparent hover:border-muted hover:bg-muted/20"}`}
 					value={name}
 					onChange={e => setName(e.target.value)}
 				/>
@@ -98,7 +98,7 @@ function CategoryRow({ category, onDelete }: { category: Category; onDelete: () 
 
 			<td className='px-8 py-5'>
 				<div className='flex items-center gap-2 text-[10px] font-black text-muted-foreground uppercase italic tracking-tighter'>
-					<LinkIcon size={12} className='text-emerald-500' />
+					<LinkIcon size={12} className='text-amber-500' />
 					{category.slug}
 				</div>
 			</td>
@@ -108,7 +108,7 @@ function CategoryRow({ category, onDelete }: { category: Category; onDelete: () 
 					{hasChanged && (
 						<Button
 							size='icon'
-							className='h-9 w-9 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg shadow-emerald-500/20 active:scale-95 transition-all'
+							className='h-9 w-9 rounded-xl bg-amber-600 hover:bg-amber-700 text-white shadow-lg shadow-amber-500/20 active:scale-95 transition-all'
 							onClick={handleUpdate}
 							disabled={pending}
 						>

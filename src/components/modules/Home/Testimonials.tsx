@@ -44,15 +44,15 @@ export function Testimonials() {
 				<div className='mb-16 text-center space-y-4'>
 					<Badge
 						variant='outline'
-						className='px-4 py-1 rounded-full border-primary/30 text-primary bg-primary/5 uppercase tracking-widest text-[10px] font-bold'
+						className='px-4 py-1 rounded-full border-amber-600 text-primary bg-primary/5 uppercase tracking-widest text-[10px] font-bold'
 					>
-						Wall of Love
+						Customer Voices
 					</Badge>
 					<h2 className='text-4xl font-black tracking-tight sm:text-5xl'>
-						What Our <span className='text-primary'>Foodies</span> Say
+						Loved  <span className='text-amber-600'>by </span> Thousands
 					</h2>
 					<p className='mx-auto max-w-xl text-lg text-muted-foreground'>
-						Join thousands of happy customers who enjoy fresh, delicious meals every single day.
+						See why food lovers choose us for fresh meals and fast delivery.
 					</p>
 				</div>
 

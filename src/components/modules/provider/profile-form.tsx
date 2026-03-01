@@ -54,7 +54,7 @@ export function ProviderProfileForm({ profile }: { profile: any }) {
 									size={16}
 								/>
 								<Input
-									className='h-12 pl-12 rounded-xl border-2 bg-muted/20 font-bold focus:border-emerald-500 transition-all'
+									className='h-12 pl-12 rounded-xl border-2 bg-muted/20 font-bold focus:border-amber-500 transition-all'
 									value={field.state.value}
 									onChange={e => field.handleChange(e.target.value)}
 									placeholder='The Royal Kitchen'
@@ -78,7 +78,7 @@ export function ProviderProfileForm({ profile }: { profile: any }) {
 									size={16}
 								/>
 								<Input
-									className='h-12 pl-12 rounded-xl border-2 bg-muted/20 font-bold focus:border-emerald-500 transition-all'
+									className='h-12 pl-12 rounded-xl border-2 bg-muted/20 font-bold focus:border-amber-500 transition-all'
 									value={field.state.value}
 									onChange={e => field.handleChange(e.target.value)}
 									placeholder='017XXXXXXXX'
@@ -99,11 +99,11 @@ export function ProviderProfileForm({ profile }: { profile: any }) {
 						</Label>
 						<div className='relative'>
 							<MapPin
-								className='absolute left-4 top-1/2 -translate-y-1/2 text-emerald-600'
+								className='absolute left-4 top-1/2 -translate-y-1/2 text-amber-600'
 								size={16}
 							/>
 							<Input
-								className='h-12 pl-12 rounded-xl border-2 bg-muted/20 font-bold focus:border-emerald-500 transition-all'
+								className='h-12 pl-12 rounded-xl border-2 bg-muted/20 font-bold focus:border-amber-500 transition-all'
 								value={field.state.value}
 								onChange={e => field.handleChange(e.target.value)}
 								placeholder='Dhaka, Bangladesh'
@@ -141,13 +141,13 @@ export function ProviderProfileForm({ profile }: { profile: any }) {
 					<div
 						className={`flex items-center justify-between p-6 rounded-[2rem] border-2 transition-all ${
 							field.state.value
-								? "bg-emerald-500/5 border-emerald-500/20"
+								? "bg-amber-500/5 border-amber-500/20"
 								: "bg-red-500/5 border-red-500/20"
 						}`}
 					>
 						<div className='flex items-center gap-4'>
 							<div
-								className={`p-3 rounded-2xl ${field.state.value ? "bg-emerald-500 text-white" : "bg-red-500 text-white"}`}
+								className={`p-3 rounded-2xl ${field.state.value ? "bg-amber-500 text-white" : "bg-red-500 text-white"}`}
 							>
 								<Power size={20} strokeWidth={3} />
 							</div>
@@ -165,7 +165,7 @@ export function ProviderProfileForm({ profile }: { profile: any }) {
 						<Switch
 							checked={field.state.value}
 							onCheckedChange={field.handleChange}
-							className='data-[state=checked]:bg-emerald-500'
+							className='data-[state=checked]:bg-amber-500'
 						/>
 					</div>
 				)}
@@ -177,7 +177,7 @@ export function ProviderProfileForm({ profile }: { profile: any }) {
 					<Button
 						type='submit'
 						disabled={isSubmitting}
-						className='w-full h-14 rounded-2xl font-black text-lg gap-3 bg-emerald-600 hover:bg-emerald-700 shadow-xl shadow-emerald-500/20 transition-all active:scale-95 text-white'
+						className='w-full h-14 rounded-2xl font-black text-lg gap-3 bg-amber-600 hover:bg-amber-700 shadow-xl shadow-amber-500/20 transition-all active:scale-95 text-white'
 					>
 						{isSubmitting ? (
 							<Loader2 className='animate-spin' size={20} />

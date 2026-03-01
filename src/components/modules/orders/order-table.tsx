@@ -9,7 +9,7 @@ const statusStyles: Record<string, { color: string; icon: any; bg: string }> = {
 	PLACED: { color: "text-blue-600", bg: "bg-blue-50", icon: Clock },
 	PREPARING: { color: "text-orange-600", bg: "bg-orange-50", icon: Timer },
 	READY: { color: "text-purple-600", bg: "bg-purple-50", icon: CheckCircle2 },
-	DELIVERED: { color: "text-emerald-600", bg: "bg-emerald-50", icon: CheckCircle2 },
+	DELIVERED: { color: "text-amber-600", bg: "bg-amber-50", icon: CheckCircle2 },
 	CANCELLED: { color: "text-red-600", bg: "bg-red-50", icon: XCircle },
 };
 
@@ -62,7 +62,7 @@ export function ProviderOrderTable({ orders }: { orders: any[] }) {
 									{/* Order ID */}
 									<td className='px-8 py-6'>
 										<div className='flex items-center gap-3'>
-											<div className='h-10 w-10 rounded-xl bg-muted/50 flex items-center justify-center font-black text-[10px] border-2 border-muted group-hover:border-emerald-500/50 transition-colors'>
+											<div className='h-10 w-10 rounded-xl bg-muted/50 flex items-center justify-center font-black text-[10px] border-2 border-muted group-hover:border-amber-500/50 transition-colors'>
 												ID
 											</div>
 											<span className='font-mono text-xs font-black italic'>
@@ -77,7 +77,7 @@ export function ProviderOrderTable({ orders }: { orders: any[] }) {
 											{order.customer?.name}
 										</div>
 										<div className='flex items-center gap-1 text-[10px] font-medium text-muted-foreground mt-1'>
-											<MapPin size={12} className='text-emerald-500' />
+											<MapPin size={12} className='text-amber-500' />
 											<span className='truncate max-w-[150px]'>{order.deliveryAddress}</span>
 										</div>
 									</td>
@@ -98,7 +98,7 @@ export function ProviderOrderTable({ orders }: { orders: any[] }) {
 
 									{/* Total Price with your Comma Style */}
 									<td className='px-8 py-6 text-center'>
-										<span className='font-black text-emerald-600 italic'>
+										<span className='font-black text-amber-600 italic'>
 											৳
 											{(order.totalPrice ?? 0).toLocaleString("en-IN", {
 												minimumFractionDigits: 2,
@@ -129,7 +129,7 @@ export function ProviderOrderTable({ orders }: { orders: any[] }) {
 												className={`
                                                     appearance-none cursor-pointer font-black text-[10px] uppercase tracking-widest
                                                     bg-background border-2 border-muted rounded-xl px-4 py-2 pr-8
-                                                    focus:border-emerald-500 focus:outline-none transition-all
+                                                    focus:border-amber-500 focus:outline-none transition-all
                                                     disabled:opacity-50
                                                 `}
 											>

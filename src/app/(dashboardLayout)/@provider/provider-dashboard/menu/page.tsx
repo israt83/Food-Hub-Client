@@ -16,14 +16,14 @@ export default async function MealsProviderPage() {
 			{/* --- HEADER (Shows up instantly) --- */}
 			<div className='flex flex-col md:flex-row md:items-end justify-between gap-6 border-b-2 border-muted pb-8'>
 				<div className='space-y-2'>
-					<div className='flex items-center gap-2 text-emerald-600'>
+					<div className='flex items-center gap-2 text-amber-600'>
 						<Utensils size={20} />
 						<span className='text-[10px] font-black uppercase tracking-[0.3em]'>
 							Kitchen Inventory
 						</span>
 					</div>
 					<h1 className='text-4xl font-black tracking-tight italic uppercase'>
-						Menu <span className='text-emerald-500'>Management</span>
+						Menu <span className='text-amber-500'>Management</span>
 					</h1>
 				</div>
 			</div>
@@ -33,7 +33,7 @@ export default async function MealsProviderPage() {
 				<div className='xl:col-span-4'>
 					<div className='sticky top-6 space-y-6'>
 						<h2 className='text-xl font-black italic uppercase ml-2'>
-							Add <span className='text-emerald-500'>New Item</span>
+							Add <span className='text-amber-500'>New Item</span>
 						</h2>
 						<MealForm categories={categories} />
 					</div>
@@ -41,7 +41,7 @@ export default async function MealsProviderPage() {
 
 				{/* RIGHT: TABLE (Wrapped in Suspense) */}
 				<div className='xl:col-span-8 space-y-6'>
-					<h2 className='text-xl font-black italic uppercase ml-2 text-emerald-600'>
+					<h2 className='text-xl font-black italic uppercase ml-2 text-amber-600'>
 						Live <span className='text-foreground'>Menu Items</span>
 					</h2>
 
@@ -61,9 +61,9 @@ async function MealTableContainer({ categories }: { categories: any[] }) {
 
 	return (
 		<>
-			<div className='absolute top-20 right-8 hidden xl:flex bg-emerald-500/10 px-5 py-2.5 rounded-2xl border-2 border-emerald-500/20 items-center gap-3'>
-				<Sparkles className='text-emerald-600' size={18} />
-				<span className='text-xs font-black uppercase italic text-emerald-700'>
+			<div className='absolute top-20 right-8 hidden xl:flex bg-amber-500/10 px-5 py-2.5 rounded-2xl border-2 border-amber-500/20 items-center gap-3'>
+				<Sparkles className='text-amber-600' size={18} />
+				<span className='text-xs font-black uppercase italic text-amber-700'>
 					{meals.length} Dishes Live
 				</span>
 			</div>

@@ -47,10 +47,10 @@ export function MealsFilters() {
 	}, [searchTerm]);
 
 	return (
-		<div className='sticky top-20 z-30 bg-background/60 backdrop-blur-xl border border-muted p-2 rounded-2xl shadow-xl'>
+		<div className='sticky top-20 z-30 bg-background/60 backdrop-blur-xl border border-amber-600 p-2 rounded-2xl shadow-xl lg:w-1/2 mx-auto'>
 			<div className='flex flex-col md:flex-row items-center gap-3'>
 				{/* Search Input */}
-				<div className='relative w-full md:flex-1'>
+				<div className='relative w-1/2 md:flex-1'>
 					{isPending ? (
 						<Loader2 className='absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 animate-spin text-primary' />
 					) : (

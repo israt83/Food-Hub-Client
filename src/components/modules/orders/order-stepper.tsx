@@ -36,7 +36,7 @@ export function OrderStepper({ currentStatus }: { currentStatus: string }) {
 			<div
 				className={cn(
 					"absolute top-1/2 left-0 h-1 -translate-y-1/2 rounded-full transition-all duration-1000 ease-in-out",
-					isDelivered ? "bg-green-500" : "bg-primary",
+					isDelivered ? "bg-amber-600" : "bg-primary",
 				)}
 				style={{
 					width: `${(activeIndex / (STEPS.length - 1)) * 100}%`,
@@ -55,7 +55,7 @@ export function OrderStepper({ currentStatus }: { currentStatus: string }) {
 								"h-12 w-12 rounded-2xl flex items-center justify-center border-4 transition-all duration-500",
 								// Completed steps turn Green if delivered, otherwise Primary
 								isCompleted || (isDelivered && isActive)
-									? "bg-green-500 border-green-500 text-white shadow-lg shadow-green-500/20"
+									? "bg-amber-500 border-amber-500 text-white shadow-lg shadow-green-500/20"
 									: isActive
 										? "bg-card border-primary text-primary scale-125 shadow-lg shadow-primary/20"
 										: "bg-card border-muted text-muted-foreground",
@@ -75,7 +75,7 @@ export function OrderStepper({ currentStatus }: { currentStatus: string }) {
 							className={cn(
 								"text-[10px] font-black uppercase tracking-tighter absolute -bottom-10 whitespace-nowrap transition-colors",
 								isDelivered && index === activeIndex
-									? "text-green-600"
+									? "text-amber-600"
 									: isActive
 										? "text-primary"
 										: "text-muted-foreground",

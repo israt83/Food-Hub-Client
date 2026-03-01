@@ -32,7 +32,7 @@ export function MealTable({ meals, categories }: Props) {
 							<tr key={meal.id} className='hover:bg-muted/20 transition-all group'>
 								<td className='px-8 py-6'>
 									<div className='flex items-center gap-4'>
-										<div className='h-14 w-14 rounded-2xl bg-muted overflow-hidden border-2 border-muted group-hover:border-emerald-500/50 transition-all'>
+										<div className='h-14 w-14 rounded-2xl bg-muted overflow-hidden border-2 border-muted group-hover:border-amber-500/50 transition-all'>
 											{meal.imageUrl ? (
 												<img
 													src={meal.imageUrl}
@@ -48,7 +48,7 @@ export function MealTable({ meals, categories }: Props) {
 										<div>
 											<p className='font-black text-sm uppercase italic'>{meal.name}</p>
 											<div className='flex items-center gap-2 mt-1'>
-												<span className='text-[9px] font-black bg-emerald-500/10 text-emerald-600 px-2 py-0.5 rounded-md uppercase'>
+												<span className='text-[9px] font-black bg-amber-500/10 text-amber-600 px-2 py-0.5 rounded-md uppercase'>
 													{categories.find(c => c.id === meal.categoryId)?.name || "General"}
 												</span>
 												{!meal.isAvailable && (
@@ -61,7 +61,7 @@ export function MealTable({ meals, categories }: Props) {
 									</div>
 								</td>
 								<td className='px-8 py-6 text-center'>
-									<span className='font-black text-emerald-600 italic text-md'>
+									<span className='font-black text-amber-600 italic text-md'>
 										৳{meal.price.toLocaleString("en-IN", { minimumFractionDigits: 2 })}
 									</span>
 								</td>

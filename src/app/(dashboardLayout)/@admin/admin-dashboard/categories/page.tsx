@@ -12,14 +12,14 @@ export default function AdminCategoriesPage() {
 			{/* --- BRANDED HEADER (Renders Instantly) --- */}
 			<div className='flex flex-col md:flex-row md:items-end justify-between gap-6 border-b-2 border-muted pb-8'>
 				<div className='space-y-2'>
-					<div className='flex items-center gap-2 text-emerald-600'>
+					<div className='flex items-center gap-2 text-amber-600'>
 						<Layers size={20} />
 						<span className='text-[10px] font-black uppercase tracking-[0.3em]'>
 							Taxonomy Control
 						</span>
 					</div>
 					<h1 className='text-4xl font-black tracking-tight italic uppercase'>
-						Food <span className='text-emerald-500'>Categories</span>
+						Food <span className='text-amber-500'>Categories</span>
 					</h1>
 					<p className='text-muted-foreground font-medium italic text-sm'>
 						Organize the marketplace menu structure and filters.
@@ -31,10 +31,10 @@ export default function AdminCategoriesPage() {
 				{/* --- CREATE SECTION (Sticky Column - Renders Instantly) --- */}
 				<div className='xl:col-span-4'>
 					<div className='sticky top-6 space-y-6'>
-						<div className='flex items-center gap-2 ml-2 text-emerald-600'>
+						<div className='flex items-center gap-2 ml-2 text-amber-600'>
 							<PlusCircle size={18} />
 							<h2 className='text-xl font-black italic uppercase text-foreground'>
-								Create <span className='text-emerald-500'>New</span>
+								Create <span className='text-amber-500'>New</span>
 							</h2>
 						</div>
 						<CategoryForm />
@@ -44,7 +44,7 @@ export default function AdminCategoriesPage() {
 				{/* --- LIST SECTION (Wrapped in Suspense) --- */}
 				<div className='xl:col-span-8 space-y-6'>
 					<h2 className='text-xl font-black italic uppercase ml-2 text-foreground'>
-						Management <span className='text-emerald-500'>List</span>
+						Management <span className='text-amber-500'>List</span>
 					</h2>
 
 					<Suspense fallback={<Loading />}>
@@ -64,13 +64,11 @@ async function CategoryListContainer() {
 	return (
 		<>
 			{/* Branded Stats Badge (Streams in with data) */}
-			<div className='absolute top-24 right-8 hidden xl:flex bg-emerald-500/10 px-5 py-3 rounded-[2rem] border-2 border-emerald-500/20 items-center gap-4'>
-				<Sparkles className='text-emerald-600' size={20} />
+			<div className='absolute top-24 right-8 hidden xl:flex bg-amber-500/10 px-5 py-3 rounded-[2rem] border-2 border-amber-500/20 items-center gap-4'>
+				<Sparkles className='text-amber-600' size={20} />
 				<div className='flex flex-col'>
-					<span className='text-[10px] font-black uppercase text-muted-foreground leading-none'>
-						Global
-					</span>
-					<span className='text-sm font-black uppercase italic text-emerald-700 leading-tight'>
+					
+					<span className='text-sm font-black uppercase italic text-amber-700 leading-tight'>
 						{categories.length} Active Labels
 					</span>
 				</div>

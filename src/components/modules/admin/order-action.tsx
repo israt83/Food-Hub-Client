@@ -63,7 +63,7 @@ export function OrderActions({ order }: { order: AdminOrder }) {
 					className={`h-9 rounded-xl border-2 font-black uppercase text-[9px] tracking-widest gap-2 transition-all active:scale-95 ${
 						status === "CANCELLED"
 							? "hover:bg-red-50 hover:text-red-600 hover:border-red-500/50"
-							: "hover:bg-emerald-50 hover:text-emerald-600 hover:border-emerald-500/50"
+							: "hover:bg-amber-50 hover:text-amber-600 hover:border-amber-500/50"
 					}`}
 				>
 					{pending ? (

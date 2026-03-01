@@ -11,12 +11,12 @@ export default function ProviderAllOrdersPage() {
 			{/* --- HEADER (Shows up instantly) --- */}
 			<div className='flex flex-col md:flex-row md:items-center justify-between gap-6'>
 				<div className='space-y-1'>
-					<div className='flex items-center gap-2 text-emerald-600 mb-1'>
+					<div className='flex items-center gap-2 text-amber-600 mb-1'>
 						<ShoppingBasket size={20} />
 						<span className='text-[10px] font-black uppercase tracking-[0.3em]'>Live Kitchen</span>
 					</div>
 					<h1 className='text-4xl font-black tracking-tight italic uppercase'>
-						Incoming <span className='text-emerald-500'>Orders</span>
+						Incoming <span className='text-amber-500'>Orders</span>
 					</h1>
 					<p className='text-muted-foreground font-medium'>
 						Manage and track your kitchen&apos;s active flow.
